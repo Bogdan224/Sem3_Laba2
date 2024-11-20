@@ -1,11 +1,4 @@
-﻿using System;
-using System.Net.Mail;
-using System.Net;
-using System.Collections;
-using System.Runtime.CompilerServices;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Numerics;
+﻿using System.Collections;
 
 namespace Sem3_Laba2
 {

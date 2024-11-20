@@ -1,5 +1,4 @@
 ﻿using Sem3_Laba2.Mammals;
-using System.Collections;
 
 namespace Sem3_Laba2
 {

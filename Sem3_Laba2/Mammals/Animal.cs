@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sem3_Laba2.Mammals
 {
-    public class Animal : Mammal
-    {
-        public override void Move()
-        {
-            Console.WriteLine("Walk");
-        }
+    public abstract class Animal
+    {   
+        public abstract void Move();
         public override string ToString()
         {
-            return base.ToString() + "\nSubclass: Animal";
-
+            return "Class: Animal";
         }
     }
 }

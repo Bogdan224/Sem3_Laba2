@@ -9,6 +9,7 @@ using System.Numerics;
 
 namespace Sem3_Laba2
 {
+
     public class MyString : ICloneable, IComparable, IComparable<MyString>, IEquatable<MyString>
     {
         //Fields
@@ -54,18 +55,17 @@ namespace Sem3_Laba2
             _characters = str.ToCharArray();
         }
 
-        //Methods:
-        
 
+
+        //Methods:
         public IEnumerator GetEnumerator() => _characters.GetEnumerator();
 
         public int IndexOf(char value)
         {
             int index = 0;
-            var comparer = EqualityComparer<char>.Default;
             foreach (var item in _characters)
             {
-                if (comparer.Equals(item, value)) return index;
+                if (item == value) return index;
                 index++;
             }
             return -1;
@@ -76,7 +76,7 @@ namespace Sem3_Laba2
             if (value is null) throw new ArgumentNullException();
             if (value == Empty) return 0;
             if (value.Length > Length) return -1;
-            if(Equals(value)) return 0;
+            if (Equals(value)) return 0;
 
             int beginIndex = 0;
             int currentIndex = 0;
@@ -113,16 +113,16 @@ namespace Sem3_Laba2
         {
             if (length == -2121354)
                 length = Length - beginIndex;
-            if(beginIndex < 0 || beginIndex > Length) throw new ArgumentOutOfRangeException();
+            if (beginIndex < 0 || beginIndex > Length) throw new ArgumentOutOfRangeException();
             if (beginIndex == Length) return new MyString(Empty);
             if (beginIndex + length > Length) throw new ArgumentOutOfRangeException();
-            
-            string result = "";
+
+            MyString result = "";
             for (int i = beginIndex; i < beginIndex + length; i++)
             {
-                 result += _characters.ElementAt(i); 
+                result += _characters.ElementAt(i);
             }
-            return new MyString(result);
+            return result;
         }
 
         public char[] ToCharArray()
@@ -137,6 +137,7 @@ namespace Sem3_Laba2
         //Operators
         public static implicit operator MyString(string characters)
         {
+            MyString strinf = "agfdh";
             if (characters == null)
                 throw new ArgumentNullException();
             return new MyString(characters);
@@ -161,12 +162,13 @@ namespace Sem3_Laba2
         {
             return left.CompareTo(right) >= 0;
         }
+
         public static MyString operator +(MyString left, MyString right)
         {
             char[] chars = new char[left.Length + right.Length];
             for (int i = 0; i < left.Length + right.Length; i++)
             {
-                if(i < left.Length)
+                if (i < left.Length)
                     chars[i] = left._characters[i];
                 else
                     chars[i] = right._characters[i - left.Length];
@@ -217,12 +219,10 @@ namespace Sem3_Laba2
             {
                 return false;
             }
-
             if (this.Length != other.Length)
             {
                 return false;
             }
-
             for (int i = 0; i < Length; i++)
             {
                 if (this[i] != other[i])
@@ -230,9 +230,7 @@ namespace Sem3_Laba2
                     return false;
                 }
             }
-
             return true;
         }
-
     }
 }

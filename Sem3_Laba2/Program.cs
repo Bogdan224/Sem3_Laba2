@@ -1,4 +1,5 @@
 ﻿using Sem3_Laba2.Mammals;
+using System.Collections;
 
 namespace Sem3_Laba2
 {
@@ -6,7 +7,7 @@ namespace Sem3_Laba2
     {
         static void Main(string[] args)
         {
-
+            List<string> list = new List<string>();
             //Part1();
             Part2();
         }
@@ -17,6 +18,7 @@ namespace Sem3_Laba2
             //Console.WriteLine(str1);
             MyString str2 = "qe";
             string str3 = "qeqoqeq";
+            
             
             
             MyString str4 = str1 + str2;
@@ -38,7 +40,7 @@ namespace Sem3_Laba2
         {
             List<Mammal> list = new List<Mammal>
             {
-                new Animal(),
+                new Mammal(),
                 new Bird(),
                 new Fish(),
                 new Lion(),

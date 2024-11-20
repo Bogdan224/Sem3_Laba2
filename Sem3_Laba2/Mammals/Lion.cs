@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sem3_Laba2.Mammals
 {
-    public sealed class Lion : Animal
+    public sealed class Lion : Mammal
     {
         public override void Move()
         {

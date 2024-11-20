@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sem3_Laba2.Mammals
 {
-    public class Tiger : Animal
+    public class Tiger : Mammal
     {
         public override void Move()
         {

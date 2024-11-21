@@ -154,9 +154,7 @@ namespace Sem3_Laba2.Tests
         public void Substring_Wrong_1(string str, int testValue1, int testValue2 = -2121354)
         {
             _myString = str;
-            if (testValue2 == -2121354)
-                testValue2 = _myString.Length;
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _myString.Substring(testValue1).ToString());
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _myString.Substring(testValue1));
         }
     }
 }

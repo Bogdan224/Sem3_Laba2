@@ -110,12 +110,12 @@ namespace Sem3_Laba2
             if (beginIndex == Length) return new MyString(Empty);
             if (beginIndex + length > Length) throw new ArgumentOutOfRangeException();
 
-            MyString result = "";
+            string result = "";
             for (int i = beginIndex; i < beginIndex + length; i++)
             {
                 result += _characters.ElementAt(i);
             }
-            return result;
+            return new MyString(result);
         }
 
         public char[] ToCharArray()
@@ -130,7 +130,6 @@ namespace Sem3_Laba2
         //Operators
         public static implicit operator MyString(string characters)
         {
-            MyString strinf = "agfdh";
             if (characters == null)
                 throw new ArgumentNullException();
             return new MyString(characters);

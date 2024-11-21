@@ -6,14 +6,13 @@ namespace Sem3_Laba2
     {
         static void Main(string[] args)
         {
-            List<string> list = new List<string>();
             //Part1();
             Part2();
         }
 
         static void Part1()
         {
-            MyString str1 = "qeqoqeq1";
+            MyString str1 = "qeqoqeq";
             //Console.WriteLine(str1);
             MyString str2 = "qe";
             string str3 = "qeqoqeq";
@@ -21,7 +20,7 @@ namespace Sem3_Laba2
             
             
             MyString str4 = str1 + str2;
-            MyString str5 = "Hello; .Worl,d Hel,lo: Hu-mans";
+            MyString str5 = "Hel,l.o; W-orld";
             Console.WriteLine(str5.RemovingPunctionalMarks());
 
             //Console.WriteLine(str1 - 5);
@@ -32,29 +31,32 @@ namespace Sem3_Laba2
 
             //Console.WriteLine(str1.IndexOf("1"));
             //Console.WriteLine(str1.Contains(str2));
-            //Console.WriteLine(str2.Substring(5,4));
+            //Console.WriteLine(str1.Substring(8));
         }
 
         static void Part2()
         {
-            List<Mammal> list = new List<Mammal>
-            {
-                new Mammal(),
-                new Bird(),
-                new Fish(),
-                new Lion(),
-                new Tiger(),
-                new Owl(),
-                new Parrot(),
-                new Shark(),
-                new Crocodile()
-            };
-            foreach (Mammal m in list)
-            {
-                Console.WriteLine(m.ToString());
-                m.Move();
-                Console.WriteLine();
-            }
+            //List<Mammal> list = new List<Mammal>
+            //{
+            //    new Mammal(),
+            //    new Bird(),
+            //    new Fish(),
+            //    new Lion(),
+            //    new Tiger(),
+            //    new Owl(),
+            //    new Parrot(),
+            //    new Shark(),
+            //    new Crocodile()
+            //};
+            //foreach (Mammal m in list)
+            //{
+            //    Console.WriteLine(m.ToString());
+            //    m.Move();
+            //    Console.WriteLine();
+            //}
+            Parrot parrot = new Parrot();
+            parrot.Fly();
+
         }
     }
 }

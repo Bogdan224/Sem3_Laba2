@@ -2,10 +2,6 @@
 {
     public class Crocodile : Fish
     {
-        public override void Move()
-        {
-            base.Move();
-        }
         public override bool Equals(object? obj)
         {
             return base.Equals(obj);
